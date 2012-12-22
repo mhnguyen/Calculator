@@ -60,7 +60,7 @@
     if ([newOperation isEqualToString:@"+"]){
         result = [self popOperand] + [self popOperand];
     }
-    if ([newOperation isEqualToString:@"X"]){
+    if ([newOperation isEqualToString:@"x"]){
         result = [self popOperand] * [self popOperand];
     }
     if ([newOperation isEqualToString:@"-"]){
@@ -80,6 +80,12 @@
     [self pushOperand:result];
     NSLog(@"The result is: %f", result);
     return result;
+}
+
+//Clears the calculator stack.
+-(void)clearStack{
+    [self.calculatorStack removeAllObjects];
+    NSLog(@"I just removed all the numbers on the stack!!");
 }
 
 @end
