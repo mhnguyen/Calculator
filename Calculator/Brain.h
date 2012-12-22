@@ -13,7 +13,6 @@
 -(void)pushOperand:(float)newOperand;
 -(float)popOperand;
 -(float)performOperation:(NSString *)newOperation;
--(void)clearStack;
 
 
 @end
